@@ -30,9 +30,16 @@ window.addEventListener('load', function() {
 
           window.item_store.push([name, str_g, str_oz, str_lb, mass_g]);
         });
-        // All items should be in the store now.
-        // Let's store it in local storage so it will be available next time.
-        window.localStorage.setItem('item_store', JSON.stringify(window.item_store));
+        try {
+          // All items should be in the store now.
+          // Let's store it in local storage so it will be available next time.
+          window.localStorage.setItem('item_store', JSON.stringify(window.item_store));
+        } catch (err) {
+          // If privacy settings are set to reject local storage (ie Safari)
+          console.error(err);
+          // It will still work but we won't be able to cache the data
+        }
+        
         createSearchIndex();
       });
     }
