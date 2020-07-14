@@ -36,6 +36,11 @@ body {
   width: 90%;
 }
 
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 footer {
   position: fixed;
   font-size: smaller;
