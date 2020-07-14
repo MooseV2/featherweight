@@ -1,7 +1,8 @@
 window.units = 1; // grams
 window.addEventListener('load', function() {
   console.log('Body onLoad')
-
+  // Reset the search box
+  document.getElementById('searchbox').value = '';
   window.item_store = JSON.parse(localStorage.getItem('item_store'));
   if (window.item_store != null) {
     console.log('Item store found in cache');
@@ -47,7 +48,7 @@ function createSearchIndex() {
 }
 
 function research() {
-  const searchText = document.getElementById("searchbox").value;
+  const searchText = document.getElementById('searchbox').value;
   let newTable = document.createElement('tbody');
   window.search.search(searchText, function(results) {
     results.map((resultIndex) => {
@@ -65,8 +66,8 @@ function research() {
   let oldTable = document.getElementById('tableresults');
 
   // Uninitialize sortable table first
-  oldTable.parentNode.setAttribute("data-sortable-initialized", "false");
-  document.getElementById('header-weight').setAttribute("data-sorted", "false");
+  oldTable.parentNode.setAttribute('data-sortable-initialized', 'false');
+  document.getElementById('header-weight').setAttribute('data-sorted', 'false');
   oldTable.parentNode.replaceChild(newTable, oldTable);
   newTable.id = 'tableresults';
   Sortable.init();
@@ -80,8 +81,8 @@ function rotateUnits() {
     window.units++;
   }
 
-  let button = document.getElementById("unitsButton");
-  const unitsText = ["Grams", "Oz", "Lb/Oz"];
+  let button = document.getElementById('unitsButton');
+  const unitsText = ['Grams', 'Oz', 'Lb/Oz'];
   button.innerHTML = `Units: ${unitsText[window.units-1]}`;
   research(); // Refresh search with updated units
 }
