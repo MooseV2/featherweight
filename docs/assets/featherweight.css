@@ -1,3 +1,58 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header > button {
+  line-height: 40px;
+  background-color: #991111;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+header > button:hover {
+  background-color: #bb3333;
+}
+
+header > img {
+  height: 96px;
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+#searchbox:focus {
+  border: 1px solid #c52525;
+}
+
+#searchbox::selection {
+  background-color: #fee;
+}
+
+body {
+  max-width: 1000px;
+  width: 90%;
+}
+
+footer {
+  position: fixed;
+  font-size: smaller;
+  color: rgba(100, 100, 100, 0.3);
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+}
+
+a { 
+  color: #991111;
+}
+
+a:hover {
+  color: #aa2222;
+}
+
 #searchbox {
   line-height: 60px;
   font-size: 20pt;
@@ -12,69 +67,13 @@
   flex-grow: 10;
 }
 
-header>img {
-  height: 96px;
-  align-self: center;
-  margin-bottom: 0;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-#searchbox:focus {
-  border: 1px solid #C52525;
-}
-
-#searchbox::selection {
-  background-color: #fee;
-}
-
-.header {
-  padding: 0;
-}
-
-
-body {
-  max-width: 1000px;
-  width: 90%;
-}
-
-footer {position: fixed;
-  font-size: smaller;
-  color: rgba(100, 100, 100, 0.3);
-  top: 0;
-  right: 0;
-  margin-right: 10px;
-
-}
-
-a { color: #991111 }
-a:hover { color: #aa2222; }
-
-
-table.sortable thead {
-  background-color:rgba(230, 230, 230, 0.7);
-  color:#991111;
-  font-weight: bold;
-  cursor: default;
-}
-
-header > button {
-  height: 40px;
-  line-height: 40px;
-  background-color: #991111;
-  display: flex;
-  align-items: center;
-}
-
-header > button:hover {
-  background-color: #bb3333;
-}
-
 .weight {
   width: 7em;
+}
+
+table.sortable thead {
+  background-color: rgba(230, 230, 230, 0.7);
+  color: #991111;
+  font-weight: bold;
+  cursor: default;
 }
