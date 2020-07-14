@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
   } else {
     console.log('Item store not found in cache; fetching');
     
-    fetch('weighted.txt')
+    fetch('assets/ul_items.txt')
       .then(response => response.text())
       .then(text => {
         console.log('Items file loaded')
