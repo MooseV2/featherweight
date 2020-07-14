@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" type="text/css" href="sortable-theme-minimal.css">
-    <link rel="stylesheet" type="text/css" href="featherweight.css">
-    <title>Featherweight</title>
-  </head>
-  <body>
-    <header>
-      <img src="assets/featherweight.png">
-      <input id="searchbox" type="text" placeholder="Loading data..." oninput="research();" disabled>
-      <button id="unitsButton" onclick="rotateUnits();">Units: Grams</button>
-    </header>
-    <table data-sortable>
-      <thead>
-        <tr>
-          <th id="header-name">Item</th>
-          <th id="header-weight" class="weight" data-sortable-type="numeric">Weight</th>
-        </tr>
-      </thead>
-      <tbody id="tableresults">
-      </tbody>
-    </table>
-    <footer>
-      <span>View the source on <a href="https://github.com/MooseV2/featherweight">GitHub</a></span>
-    </footer>
-    <script type="text/javascript" src="sortable.min.js"></script>
-    <script type="text/javascript" src="flexsearch.min.js"></script>
-    <script type="text/javascript" src="featherweight.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/sortable-theme-minimal.css">
+  <link rel="stylesheet" type="text/css" href="assets/featherweight.css">
+  <title>Featherweight</title>
+</head>
+<body>
+<header>
+  <img src="featherweight.png">
+<input id="searchbox" type="text" placeholder="Loading data..." oninput="research();" disabled>
+<button id="unitsButton" onclick="rotateUnits();">Units: Grams</button>
+</header>
+
+<table data-sortable>
+  <thead>
+    <tr>
+      <th id="header-name">Item</th>
+      <th id="header-weight" class="weight" data-sortable-type="numeric">Weight</th>
+    </tr>
+  </thead>
+  <tbody id="tableresults">
+  </tbody>
+</table>
+
+<footer>
+  <span>View the source on <a href="https://github.com/MooseV2/featherweight">GitHub</a></span>
+</footer>
+
+<script type="text/javascript" src="assets/sortable.min.js"></script>
+<script type="text/javascript" src="assets/flexsearch.min.js"></script>
+<script type="text/javascript" src="assets/featherweight.js"></script>
+
+</body>
 </html>
