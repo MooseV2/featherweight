@@ -34,6 +34,8 @@ header > img {
 body {
   max-width: 1000px;
   width: 90%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 html {
