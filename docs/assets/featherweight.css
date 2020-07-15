@@ -33,12 +33,14 @@ header > img {
 
 body {
   max-width: 1000px;
-  width: 90%;
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 1rem;
 }
 
 html {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  padding: 0;
 }
 
 footer {
